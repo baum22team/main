@@ -10,7 +10,7 @@ function toggleFade(objectName) {
             visible = false;
         }
         else {  
-            setTimeout(showFade(0), 5000);
+            showFade(0);
             visible = true;
         }
     }
@@ -38,7 +38,7 @@ function showFade(opac) {
             obj.style.visibility = "visible";
             obj.style.opacity = (opac / 100);
             obj.style.filter = "alpha(opacity=" + opac + ")";
-            timerid = setTimeout("showFade(" + (opac + 10) + ")",50);
+            timerid = setTimeout("showFade(" + (opac + 10) + ")",100);
         }
        else {
             obj.style.opacity = 1;
