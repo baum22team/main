@@ -32,7 +32,7 @@ function hideFade(opac) {
     }
 }
 
-function showFade(opac) {
+setTimeout(function showFade(opac) {
     if (obj) {
        if (opac < 100) {
             obj.style.visibility = "visible";
@@ -46,4 +46,4 @@ function showFade(opac) {
             clearTimeout(timerid);
         }
     }
-}
+}, 5000)
